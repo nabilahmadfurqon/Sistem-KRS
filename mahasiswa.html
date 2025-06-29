@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard Mahasiswa - Sistem KRS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="bg-indigo-600 text-white px-6 py-4 shadow">
+    <div class="flex justify-between items-center max-w-7xl mx-auto">
+      <h1 class="text-xl font-bold">Sistem KRS</h1>
+      <div class="text-sm">Mahasiswa: <strong>Dummy Mahasiswa</strong></div>
+    </div>
+  </header>
+
+  <!-- Layout -->
+  <div class="flex max-w-7xl mx-auto mt-6 px-4 gap-6">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-white shadow rounded-lg p-4 hidden md:block">
+      <nav class="space-y-3">
+        <a href="#" class="block px-4 py-2 rounded hover:bg-indigo-100 text-indigo-600 font-semibold">Dashboard</a>
+        <a href="#" class="block px-4 py-2 rounded hover:bg-gray-100">Lihat Mata Kuliah</a>
+        <a href="#" class="block px-4 py-2 rounded hover:bg-gray-100">Isi KRS</a>
+        <a href="#" class="block px-4 py-2 rounded hover:bg-gray-100">Status KRS</a>
+        <a href="#" class="block px-4 py-2 rounded hover:bg-gray-100">Revisi KRS</a>
+        <hr>
+        <a href="Login.html" class="block px-4 py-2 rounded hover:bg-red-100 text-red-500">Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 space-y-8 pb-10">
+
+      <!-- Mata Kuliah Ditawarkan -->
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-xl font-bold mb-4 text-indigo-700">📚 Mata Kuliah Ditawarkan</h2>
+        <div class="grid md:grid-cols-2 gap-4 text-sm">
+          <div class="p-3 bg-gray-50 rounded border">IF301 - Struktur Data (3 SKS)</div>
+          <div class="p-3 bg-gray-50 rounded border">IF302 - Basis Data (3 SKS)</div>
+          <div class="p-3 bg-gray-50 rounded border">IF303 - Pemrograman Web (3 SKS)</div>
+          <div class="p-3 bg-gray-50 rounded border">IF304 - AI Dasar (3 SKS)</div>
+        </div>
+      </div>
+
+      <!-- Form KRS -->
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-xl font-bold mb-4 text-indigo-700">📝 Isi KRS</h2>
+        <form class="space-y-4 text-sm">
+          <label class="block">
+            <input type="checkbox" class="mr-2" checked> IF301 - Struktur Data
+          </label>
+          <label class="block">
+            <input type="checkbox" class="mr-2"> IF302 - Basis Data
+          </label>
+          <label class="block">
+            <input type="checkbox" class="mr-2" checked> IF303 - Pemrograman Web
+          </label>
+          <label class="block">
+            <input type="checkbox" class="mr-2"> IF304 - AI Dasar
+          </label>
+          <button class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">
+            Kirim KRS
+          </button>
+        </form>
+      </div>
+
+      <!-- Status KRS -->
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-xl font-bold mb-4 text-indigo-700">📊 Status KRS</h2>
+        <table class="w-full text-sm text-left border">
+          <thead class="bg-gray-100">
+            <tr>
+              <th class="p-2 border">Kode</th>
+              <th class="p-2 border">Mata Kuliah</th>
+              <th class="p-2 border">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-2 border">IF301</td>
+              <td class="p-2 border">Struktur Data</td>
+              <td class="p-2 border text-green-600">Disetujui</td>
+            </tr>
+            <tr>
+              <td class="p-2 border">IF303</td>
+              <td class="p-2 border">Pemrograman Web</td>
+              <td class="p-2 border text-yellow-600">Menunggu Persetujuan</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Revisi Jika Ditolak -->
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-xl font-bold mb-4 text-indigo-700">🔁 Catatan Revisi</h2>
+        <p class="text-sm text-red-600">IF302 - Basis Data ditolak. Dosen memberi catatan: "Ambil saat semester 5."</p>
+        <button class="mt-4 bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition">
+          Revisi KRS
+        </button>
+      </div>
+
+      <!-- Cetak -->
+      <div class="text-right">
+        <button class="bg-gray-800 text-white px-6 py-2 rounded hover:bg-black transition text-sm">
+          Cetak KRS (PDF)
+        </button>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-10 text-center text-gray-400 text-sm py-6">
+    &copy; 2025 Sistem KRS - Mahasiswa
+  </footer>
+
+</body>
+</html>
